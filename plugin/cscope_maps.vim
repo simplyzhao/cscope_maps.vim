@@ -97,6 +97,17 @@ if has("cscope")
     nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
 
+    " Hitting 'CTRL-\' *twice* before the search type opens a new tab
+    " instead of using one
+
+    nmap <C-\><C-\>s :tab scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\><C-\>g :tab scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\><C-\>c :tab scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\><C-\>t :tab scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\><C-\>e :tab scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-\><C-\>f :tab scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <C-\><C-\>i :tab scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\><C-\>d :tab scs find d <C-R>=expand("<cword>")<CR><CR>
 
     " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
     " makes the vim window split horizontally, with search result displayed in
